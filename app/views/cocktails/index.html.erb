@@ -1,1 +1,12 @@
-<h1>My list of cocktails !</h1>
+<div class="navbar">
+  <i class="fas fa-cocktail"></i>
+  <input type="text" name="search-bar" placeholder = "search">
+  <%= link_to "Add a new explosive cocktail", new_cocktail_path %>
+</div>
+
+<h1>Explosive cocktails !</h1>
+  <% @cocktails.each do |cocktail| %>
+    <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+  <% end %>
+
+
