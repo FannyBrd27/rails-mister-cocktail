@@ -13,8 +13,8 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktail = Cocktail.create(params[cocktail_params])
-    redirect_to cocktail_path(@cocktail)
+    @cocktail = Cocktail.create(cocktail_params)
+    redirect_to cocktails_path
   end
 
   private

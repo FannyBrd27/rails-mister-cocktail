@@ -1,5 +1,9 @@
-<h1>New explosive cocktail !</h1>
-<%= simple_form_for @cocktails do |f| %>
+<div class="new-view-cocktail-header">
+  <h1>New explosive cocktail !</h1>
+  <%= link_to "Back to my list of cocktails", cocktails_path, class: "link-back-to-list" %>
+</div>
+
+<%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
   <%= f.submit "Add this cocktail", class: "button add" %>
 <% end %>

@@ -1,4 +1,12 @@
-<div class="show-header">
+<div class="show-view-cocktail-header">
   <h1><%= @cocktail.name %></h1>
-  <%= link_to "Back to my list of cocktails", cocktails_path %>
+  <%= link_to "Back to my list of cocktails", cocktails_path, class: "link-back-to-list" %>
 </div>
+
+<div class="show-view-cocktail-content">
+  <% @cocktail.doses.each do |dose| %>
+    <p>Doses : <%= dose %></p>
+  <% end %>
+</div>
+
+<%= link_to "Add another magic dose to my cocktail", new_cocktail_dose_path(@cocktail), class: "button add" %>
