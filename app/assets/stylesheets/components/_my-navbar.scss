@@ -1,0 +1,60 @@
+.my-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background-color: white;
+  transition: all 0.3s ease;
+  height: 50px;
+  padding: 0px 30px;
+}
+
+.logo {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.logo .fa-glass-martini {
+  color: #ea4c4c;
+  margin-right: 10px;
+}
+
+.logo p {
+  font-size: 20px;
+  margin: 0px;
+}
+
+.navbar-ipt-btn {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.search-bar, {
+  box-shadow: 1px 1px 1px lightgrey;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  height: 25px;
+  padding: 8px;
+  margin-right: 0px;
+  border: 1px solid lightgrey;
+  font-size: 15px;
+}
+
+.fa-wrapper {
+  height: 25px;
+  width: 20px;
+  padding: 0px 2px 0px 2px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  box-shadow: 1px 1px 1px lightgrey;
+  border-left: none;
+  background-color: white;
+}
+
+.fa-search {
+  font-size: 17px;
+}
+
+

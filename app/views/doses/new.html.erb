@@ -1,10 +1,15 @@
-<div class="new-view-dose-header">
-  <h1>New magic dose</h1>
-  <%= link_to "Back to my cocktail", cocktail_path(@cocktail), class: "link-back-to-list" %>
+<div class="new-view-header-wrapper", style= "background-image: url('https://www.vitamix.com/media/other/images/x5-Unexpected-Cocktail-Ingredients-Main.jpg.pagespeed.ic.TnfazBRtsn.jpg');>> ">
+  <div class="new-view-header">
+    <h1>New magic dose to my <%= @cocktail.name %></h1>
+    <%= link_to "Back to my cocktail", cocktail_path(@cocktail), class: "link-back-to-list" %>
+  </div>
+  <hr>
 </div>
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit "Add this dose", class: "button add" %>
-<% end %>
+<div class="form">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :description %>
+    <%= f.input :ingredient_id, collection: Ingredient.all %>
+    <%= f.submit "Add this dose", class: "button-add" %>
+  <% end %>
+</div>

@@ -1,0 +1,51 @@
+.container-elements {
+  margin: 120px;
+}
+
+.card {
+  height: 300px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-color: lightgrey;
+  color: white;
+  position: relative;
+  border-radius: 5px;
+  position: relative;
+}
+
+.card-name{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+}
+
+.card-footer {
+  width: 100px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: absolute;
+  background-color: black;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  bottom:0;
+  height: 15%;
+  width:100%;
+}
+
+.fa-eye {
+  margin-left: 7px;
+}
+
+.card-footer a {
+  margin-left: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: light;
+}
+
+.card-footer a:hover {
+  text-decoration: none;
+}
+
