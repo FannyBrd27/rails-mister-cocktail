@@ -1,21 +1,43 @@
-<div class="container-elements">
-  <div class="card-container">
-    <div class="row">
-      <% @cocktails[0...3].each do |cocktail| %>
-        <div class="col-xs-12 col-sm-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-name">
-                <h4><%= cocktail.name %></h4>
+<div class="cocktails-list">
+  <div class="my-navbar">
+    <div class="logo">
+      <i class="fas fa-glass-martini"></i>
+      <p>Cock'tail</p>
+    </div>
+    <div class="navbar-ipt-btn">
+      <input type="text" name="search-bar" placeholder = "search.." class = "search-bar">
+      <div class="fa-wrapper"><i class="fa fa-search"></i></div>
+    </div>
+  </div>
+
+  <div class="cocktail-wrapper" img" style = "background-image: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('https://usateatsiptrip.files.wordpress.com/2017/10/gettyimages-516959334.jpg?w=1000&h=600&crop=1')">>
+    <div class="new-view-header">
+      <h1 class = "list-title">All my explosive cocktails</h1>
+      <%= link_to "Back to homepage", root_path, class: "link-back-to-homepage" %>
+    </div>
+
+    <div class="container-elements">
+      <div class="card-container">
+        <div class="row">
+          <% @cocktails.each do |cocktail| %>
+            <div class="col-xs-12 col-sm-4">
+              <div class="card">
+                <div class="card-body">
+                  <div class="card-name">
+                    <h4><%= cocktail.name %></h4>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <i class="far fa-eye"></i>
+                  <%= link_to "See receipe..", cocktail_path(cocktail, class: "link") %>
+                </div>
               </div>
             </div>
-            <div class="card-footer">
-              <i class="far fa-eye"></i>
-              <%= link_to "See receipe..", cocktail_path(cocktail, class: "link") %>
-            </div>
-          </div>
+          <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
+
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "button-add" %>
   </div>
 </div>

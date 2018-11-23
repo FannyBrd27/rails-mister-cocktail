@@ -15,6 +15,8 @@
   padding: 5px;
 }
 
+// LINKS
+
 .link-back-to-list {
   color: #ea4c4c;
   text-decoration: overline;
@@ -25,7 +27,30 @@
   text-decoration: none;
 }
 
+.link-back-to-homepage {
+  color: black;
+  text-decoration: overline;
+}
+
+.link-back-to-homepage:hover {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
 .form {
   align-items: center;
+}
 
+
+// INDEX PAGE
+
+.list-title {
+  color: white;
+}
+
+.cocktail-wrapper {
+  background-size: cover;
 }

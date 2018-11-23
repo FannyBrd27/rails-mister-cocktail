@@ -13,3 +13,5 @@
 <div>
   <%= link_to "Add another magic dose to my cocktail", new_cocktail_dose_path(@cocktail), class: "button-add" %>
 </div>
+
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
